@@ -22,5 +22,29 @@
         <div class="title">KidsPro</div>
       </div>
     </div>
+
+	<script>
+  const doc = document.documentElement;
+  const content = document.querySelector(".webgl-content");
+  setInterval(function() {
+    const c = document.querySelector("canvas");
+    if (!c) {
+      return;
+    }
+    if (doc.clientWidth <= c.clientWidth) {
+      const scale = doc.clientWidth / c.clientWidth;
+      content.style.transformOrigin = "top left";
+      content.style.top = content.style.left = "0";
+      content.style.transform = "scale(" + scale + ")";
+    } else {
+      content.style.transformOrigin = "";
+      content.style.top = content.style.left = "";
+      content.style.transform = "";
+    }
+  }, 1000);
+</script>
+
+
+	<meta name="viewport" content="width=1136,initial-scale=1" />
   </body>
 </html>
