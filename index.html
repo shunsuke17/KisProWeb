@@ -12,32 +12,25 @@
 	  UnityLoader.SystemInfo.mobile = false;
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/KisProWeb2.json", {onProgress: UnityProgress});
     </script>
-
-	<script>
-  const doc = document.documentElement;
-  const content = document.querySelector(".webgl-content");
-  setInterval(function() {
-    const c = document.querySelector("canvas");
-    if (!c) {
-      return;
-    }
-    if (doc.clientWidth <= c.clientWidth) {
-      const scale = doc.clientWidth / c.clientWidth;
-      content.style.transformOrigin = "top left";
-      content.style.top = content.style.left = "0";
-      content.style.transform = "scale(" + scale + ")";
-    } else {
-      content.style.transformOrigin = "";
-      content.style.top = content.style.left = "";
-      content.style.transform = "";
-    }
-  }, 1000);
-</script>
-
-
-	<meta name="viewport" content="width=1136,initial-scale=1" />
   </head>
   <body>
+
+  <div id="mobile" class="cover"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    var div = document.getElementById('mobile');
+    if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
+      var mobileHeight = $(window).height();
+      var mobileWidth = $(window).width();
+      var tempData = '<center><div id="unityContainer" style="width: '+mobileWidth+'px; height: '+mobileHeight+'px; margin: auto"></div></center>'
+      div.innerHTML = tempData;
+    }
+    else {
+      div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
+    }
+    </script>
+
+
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 540px"></div>
       <div class="footer">
