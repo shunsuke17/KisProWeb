@@ -14,7 +14,16 @@
     </script>
   </head>
   <body>
-  <script>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 540px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">KidsPro</div>
+      </div>
+    </div>
+
+	<script>
   const doc = document.documentElement;
   const content = document.querySelector(".webgl-content");
   setInterval(function() {
@@ -36,17 +45,7 @@
 </script>
 
 
-	<meta name="viewport" content="width=1136,initial-scale=1" />
-
-
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 540px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">KidsPro</div>
-      </div>
-    </div>
+	<meta name="viewport" content="width=1136,initial-scale=0.5" />
 
 	
   </body>
