@@ -14,7 +14,6 @@
     </script>
   </head>
   <body>
-
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 540px"></div>
       <div class="footer">
@@ -22,24 +21,6 @@
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
         <div class="title">KidsPro</div>
       </div>
-
-
-	  <div id="mobile" class="cover"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-    var div = document.getElementById('mobile');
-    if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
-      var mobileHeight = $(window).height();
-      var mobileWidth = $(window).width();
-      var tempData = '<center><div id="unityContainer" style="width: '+mobileWidth+'px; height: '+mobileHeight+'px; margin: auto"></div></center>'
-      div.innerHTML = tempData;
-    }
-    else {
-      div.innerHTML = '<center><div id="unityContainer" style="width: 960px; height: 540px; margin: auto"></div></center>';
-    }
-    </script>
     </div>
-
-	
   </body>
 </html>
