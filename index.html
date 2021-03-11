@@ -15,7 +15,16 @@
   </head>
   <body>
 
-  <div id="mobile" class="cover"></div>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 540px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">KidsPro</div>
+      </div>
+
+
+	  <div id="mobile" class="cover"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
     var div = document.getElementById('mobile');
@@ -29,15 +38,6 @@
       div.innerHTML = '<center><div id="unityContainer" style="width: 960px; height: 540px; margin: auto"></div></center>';
     }
     </script>
-
-
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 540px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">KidsPro</div>
-      </div>
     </div>
 
 	
